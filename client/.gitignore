@@ -27,4 +27,18 @@ node_modules/
 .env
 dist/
 .vite/
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Build folders
+dist/
+build/
+
+# OS files
+.DS_Store
 
