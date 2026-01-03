@@ -1,3 +1,125 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ================================
+   Global Reset & Base Theme
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b2b2b, #6e6e6e);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* ================================
+   Accent Color
+================================ */
+
+.text-accent {
+  color: #bcfd4c;
+}
+
+/* ================================
+   Disable Text Selection (UI Only)
+================================ */
+
+/* Headings & UI labels — NOT selectable */
+h1,
+h4,
+h5,
+.app-title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* Inputs & content — selectable */
+input,
+textarea,
+p,
+.card-body,
+.card-body div {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* ================================
+   Main App Card
+================================ */
+
+.app-card {
+  background: #ffffff;
+  color: #2b2b2b;
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* ================================
+   Form Inputs
+================================ */
+
+.form-control {
+  border-radius: 12px;
+  padding: 0.65rem;
+  border: 1px solid #ced4da;
+  transition: all 0.25s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #bcfd4c;
+  box-shadow: 0 0 0 0.2rem rgba(188, 253, 76, 0.35);
+}
+
+/* ================================
+   Buttons
+================================ */
+
+.btn-primary {
+  background: #bcfd4c;
+  border: none;
+  color: #2b2b2b;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+
+.btn-primary:hover {
+  background: #a8e63f;
+  color: #1f1f1f;
+}
+
+/* ================================
+   Contact Cards
+================================ */
+
+.card {
+  border-radius: 14px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   Utilities
+================================ */
+
+hr {
+  margin: 1.5rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.text-muted {
+  color: #6e6e6e !important;
+}

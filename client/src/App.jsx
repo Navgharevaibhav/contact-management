@@ -1,9 +1,33 @@
-export default function App() {
+import React, { useState } from "react";
+import ContactForm from "./components/ContactForm";
+import ContactList from "./Components/ContactList";
+
+function App() {
+  const [refresh, setRefresh] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-      <h1 className="text-4xl font-bold text-white">
-        Tailwind is Working 🚀
-      </h1>
+    <div className="container py-5">
+      {/* Header */}
+      <div className="text-center mb-4">
+        <h1 className="fw-bold text-accent app-title">
+          Contact Management
+        </h1>
+        <p className="text-light opacity-75">
+          Organize and manage your contacts professionally
+        </p>
+      </div>
+
+      {/* Main Card */}
+      <div
+        className="app-card mx-auto"
+        style={{ maxWidth: "650px" }}
+      >
+        <ContactForm onContactAdded={() => setRefresh(!refresh)} />
+        <hr />
+        <ContactList refresh={refresh} />
+      </div>
     </div>
   );
 }
+
+export default App;
