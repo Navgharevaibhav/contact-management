@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ContactForm from "./components/ContactForm";
-import ContactList from "./Components/ContactList";
-
+import ContactList from "./components/ContactList";
 function App() {
   const [refresh, setRefresh] = useState(false);
 
